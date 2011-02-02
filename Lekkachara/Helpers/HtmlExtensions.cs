@@ -12,9 +12,13 @@ namespace Lekkachara.Helpers
         public static MvcHtmlString PagingList(this HtmlHelper helper, string controller,string action, int currentPageIndex, int pageCount)
         {
             var builder = new StringBuilder();
+            HttpRequestBase request = helper.ViewContext.HttpContext.Request;
+            var queryParams = HttpUtility.ParseQueryString(request.Url.Query);
+            int year = string.IsNullOrWhiteSpace(queryParams["year"]) ? DateTime.Now.Year : int.Parse(queryParams["year"]);
+            int month = string.IsNullOrWhiteSpace(queryParams["month"]) ? DateTime.Now.Month : int.Parse(queryParams["month"]);
             for (int i = 1; i <= pageCount; i++)
             {
-                var link = helper.ActionLink(" " + i + " |", action,controller, new {pageIndex = i},null);
+                var link = helper.ActionLink(" " + i + " |", action,controller, new {pageIndex = i,month,year},null);
                 if (i != currentPageIndex)
                 {
                     builder.Append(link);
