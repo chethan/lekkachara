@@ -1,0 +1,14 @@
+﻿@model Service.Domain.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User Detail</h2>
+@Html.Partial("_Details", Model) 
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

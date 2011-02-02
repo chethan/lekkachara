@@ -1,0 +1,11 @@
+﻿@model Service.Domain.User
+<fieldset>
+    <legend>Fields</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+    <div class="display-label">Active</div>
+    <div class="display-field">@(!Model.Inactive?"Yes":"No")</div>
+</fieldset>
+
+

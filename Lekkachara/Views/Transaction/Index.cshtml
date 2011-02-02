@@ -1,0 +1,116 @@
+﻿@using Lekkachara.Helpers;
+@model Lekkachara.Models.TransactionModel
+@{
+    ViewBag.Title = "Transactions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#MonthYear").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            showButtonPanel: true,
+            dateFormat: 'MM yy',
+            onClose: function (dateText, inst) {
+                var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+                var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                window.location.href = '?month=' + (parseInt(month) + 1) + '&year=' + year;
+            }
+        });
+    })
+</script>
+<h2>
+    Transactions</h2>
+<div>
+    @Html.MonthYearTextBox("MonthYear")
+</div>
+<h3>
+    TotalAmount: @Model.TotalAmount PerHead: @Model.PerHeadAmount
+</h3>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="grid_scroll">
+    @if (Model.Transactions.Count > 0)
+    {
+        <table>
+            <tr>
+                <th>
+                    Who
+                </th>
+                <th>
+                    What
+                </th>
+                <th>
+                    HowMuch
+                </th>
+                <th>
+                    When
+                </th>
+                <th>
+                </th>
+            </tr>
+            @foreach (var item in Model.Transactions)
+            {
+                <tr>
+                    <td>
+                        @item.Who.Name
+                    </td>
+                    <td>
+                        @item.What
+                    </td>
+                    <td>
+                        @Html.DisplayMoney(@item.HowMuch)
+                    </td>
+                    <td>
+                        @String.Format("{0:dd-MMM-yyyy}", item.When)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="5">
+                    @Html.PagingList("Transaction", "index", (int)ViewData["pageIndex"], (int)ViewData["pageCount"])
+                </td>
+            </tr>
+        </table>
+    
+    }
+</div>
+<div class="grid">
+    <table>
+        <tr>
+            <th>
+                User
+            </th>
+            <th>
+                Spent
+            </th>
+            <th>
+                Incoming
+            </th>
+            <th>
+                Outgoing
+            </th>
+        </tr>
+        @foreach (var item in Model.UserTransactions)
+        {
+            <tr>
+                <td>
+                    @item.User.Name
+                </td>
+                <td>
+                    @item.TotalAmount
+                </td>
+                <td>
+                    @Html.DisplayMoney(item.AmountToBeReceived)
+                </td>
+                <td>
+                    @Html.DisplayMoney(item.AmountToBePaid)
+                </td>
+            </tr>
+        }
+    </table>
+</div>

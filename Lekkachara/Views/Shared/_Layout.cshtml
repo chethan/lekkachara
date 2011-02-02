@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/ui.jqgrid.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/jquery-ui-1.8.7.custom.css")" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")"></script>
+    <script language="javascript" type="text/javascript" src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")"></script>
+    <script language="javascript" type="text/javascript" src="@Url.Content("~/Scripts/jquery-ui-1.8.7.custom.min.js")"></script>
+    <script language="javascript" type="text/javascript" src="@Url.Content("~/Scripts/jquery.ui.widgets.js")"></script>
+    <script language="javascript" type="text/javascript" src="@Url.Content("~/Scripts/jquery.ui.tabs.js")"></script>
+    <script language="javascript" type="text/javascript" src="@Url.Content("~/Scripts/App/menu.js")"></script>
+    <script language="javascript" type="text/javascript" src="@Url.Content("~/Scripts/grid.locale-en.js")"></script>
+    <script language="javascript" type="text/javascript" src="@Url.Content("~/Scripts/jquery.jqGrid.min.js")"></script>
+    @if (@ViewBag.Title == "Transactions") { 
+    <link href="@Url.Content("~/Content/transaction.css")" rel="stylesheet" type="text/css" />
+    }
+        
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>Lekkachara</h1>
+                <h2>tippege yesudru tappde lekka bari</h2>
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink("User", "Index", "User")</li>
+                    <li>@Html.ActionLink("Transaction", "Index", "Transaction")</li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            @RenderBody()
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

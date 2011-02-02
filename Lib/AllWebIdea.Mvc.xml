@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AllWebIdea.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:AllWebIdea.Mvc.LowercaseRouteExtensions">
+            <summary>
+            Extended the routes
+            </summary>
+        </member>
+        <member name="M:AllWebIdea.Mvc.LowercaseRouteExtensions.MapLowercaseRoute(System.Web.Routing.RouteCollection,System.String,System.String)">
+            <summary>
+            Map a lowercase route
+            </summary>
+            <param name="routes"></param>
+            <param name="name"></param>
+            <param name="url"></param>
+        </member>
+        <member name="M:AllWebIdea.Mvc.LowercaseRouteExtensions.MapLowercaseRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.Object)">
+            <summary>
+            Map a lowercase route
+            </summary>
+            <param name="routes"></param>
+            <param name="name"></param>
+            <param name="url"></param>
+            <param name="defaults"></param>
+        </member>
+        <member name="M:AllWebIdea.Mvc.LowercaseRouteExtensions.MapLowercaseRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Map a lowercase route
+            </summary>
+            <param name="routes"></param>
+            <param name="name"></param>
+            <param name="url"></param>
+            <param name="defaults"></param>
+            <param name="constraints"></param>
+        </member>
+        <member name="T:AllWebIdea.Mvc.LowercaseRoute">
+            <summary>
+            Lowercase Route
+            </summary>
+        </member>
+        <member name="M:AllWebIdea.Mvc.LowercaseRoute.#ctor(System.String,System.Web.Routing.IRouteHandler)">
+            <summary>
+            create route
+            </summary>
+            <param name="url"></param>
+            <param name="routeHandler"></param>
+        </member>
+        <member name="M:AllWebIdea.Mvc.LowercaseRoute.#ctor(System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.IRouteHandler)">
+            <summary>
+            create route
+            </summary>
+            <param name="url"></param>
+            <param name="defaults"></param>
+            <param name="routeHandler"></param>
+        </member>
+        <member name="M:AllWebIdea.Mvc.LowercaseRoute.#ctor(System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.IRouteHandler)">
+            <summary>
+            create route
+            </summary>
+            <param name="url"></param>
+            <param name="defaults"></param>
+            <param name="constraints"></param>
+            <param name="routeHandler"></param>
+        </member>
+        <member name="M:AllWebIdea.Mvc.LowercaseRoute.#ctor(System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.IRouteHandler)">
+            <summary>
+            create route
+            </summary>
+            <param name="url"></param>
+            <param name="defaults"></param>
+            <param name="constraints"></param>
+            <param name="dataTokens"></param>
+            <param name="routeHandler"></param>
+        </member>
+        <member name="M:AllWebIdea.Mvc.LowercaseRoute.GetVirtualPath(System.Web.Routing.RequestContext,System.Web.Routing.RouteValueDictionary)">
+            <summary>
+            convert
+            </summary>
+            <param name="requestContext"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Web.Mvc.CalendarExtensions">
+            <summary>
+            Extended the HtmlHelper for Calendar
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.CalendarExtensions.Calendar(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Generate a default calendar with the current date
+            </summary>
+            <param name="helper">the HtmlHelper object</param>
+            <returns>well-formed XHTML string</returns>
+        </member>
+        <member name="M:System.Web.Mvc.CalendarExtensions.Calendar(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Generate a calendar with the specified name and the current date
+            </summary>
+            <param name="helper">the HtmlHelper object</param>
+            <param name="name">the name of the calendar</param>
+            <returns>well-formed XHTML string</returns>
+        </member>
+        <member name="M:System.Web.Mvc.CalendarExtensions.Calendar(System.Web.Mvc.HtmlHelper,System.String,System.DateTime)">
+            <summary>
+            Generate a calendar with the specified name and date
+            </summary>
+            <param name="helper">the HtmlHelper object</param>
+            <param name="name">the name of the calendar</param>
+            <param name="selectedDate">the date to show in the calendar</param>
+            <returns>well-formed XHTML string</returns>
+        </member>
+        <member name="M:System.Web.Mvc.CalendarExtensions.Calendar(System.Web.Mvc.HtmlHelper,System.String,System.Collections.Generic.IEnumerable{System.DateTime},System.String,System.String)">
+            <summary>
+            Generate a calendar with data array and specified fields
+            </summary>
+            <param name="helper">the HtmlHelper object</param>
+            <param name="name">the name of the calendar</param>
+            <param name="rawDates">the DateTime array</param>
+            <param name="controllerName">the controller name</param>
+            <param name="actionName">the action name</param>
+            <returns>well-formed XHTML string</returns>
+        </member>
+        <member name="M:System.Web.Mvc.CalendarExtensions.Calendar(System.Web.Mvc.HtmlHelper,System.String,System.DateTime,System.Collections.Generic.IEnumerable{System.DateTime},System.String,System.String)">
+            <summary>
+            Generate a calendar with data array and specified fields
+            </summary>
+            <param name="helper">the HtmlHelper object</param>
+            <param name="name">the name of the calendar</param>
+            <param name="selectedDate">the date to show int the calendar</param>
+            <param name="rawDates">the DateTime array</param>
+            <param name="controllerName">the controller name</param>
+            <param name="actionName">the action name</param>
+            <returns>well-formed XHTML string</returns>
+        </member>
+        <member name="T:System.Web.Mvc.Calendar">
+            <summary>
+            Well-formed XHTML Calendar for ASP.NET MVC
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Calendar.#ctor">
+            <summary>
+            default calendar
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Calendar.#ctor(System.String)">
+            <summary>
+            Create a calendar use the specified name
+            </summary>
+            <param name="name">the name of calendar</param>
+        </member>
+        <member name="M:System.Web.Mvc.Calendar.#ctor(System.String,System.DateTime)">
+            <summary>
+            Create a calendar use the specified name and selected date
+            </summary>
+            <param name="name">the name of calendar</param>
+            <param name="selectedDate">selected date</param>
+        </member>
+        <member name="M:System.Web.Mvc.Calendar.#ctor(System.String,System.DateTime,System.Collections.Generic.IEnumerable{System.DateTime},System.Web.Mvc.HtmlHelper,System.String,System.String)">
+            <summary>
+            Create a calendar use data that generate links
+            </summary>
+            <param name="name">the name of calendar</param>
+            <param name="selectedDate">selected date</param>
+            <param name="rawDates">the date array</param>
+            <param name="helper">HtmlHelper object</param>
+            <param name="controllerName">controller name</param>
+            <param name="actionName">action name</param>
+        </member>
+        <member name="M:System.Web.Mvc.Calendar.ToString">
+            <summary>
+            Returns the built calendar
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:System.Web.Mvc.Calendar.Name">
+            <summary>
+            Gets the name of current calendar, it's diaplayed as the "id" of the HTML element "table"
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Calendar.SelectedDate">
+            <summary>
+            Gets the selected date of current calendar
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Calendar.RawDates">
+            <summary>
+            Gets the date array which to generate the links
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Calendar.ControllerName">
+            <summary>
+            Gets the controller name that to generate the daily links
+            </summary>
+        </member>
+        <member name="P:System.Web.Mvc.Calendar.ActionName">
+            <summary>
+            Gets the action name that to generate the daily links
+            </summary>
+        </member>
+    </members>
+</doc>

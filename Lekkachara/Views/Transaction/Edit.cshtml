@@ -1,0 +1,48 @@
+﻿@model Service.Domain.Transaction
+@{
+    ViewBag.Title ="Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#When").datepicker({ dateFormat: 'd-M-y' });
+    })     
+</script>  
+
+<h2>Edit Transaction</h2>
+@using (Html.BeginForm())
+{
+@Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Fields</legend>
+        <div class="editor-field">
+            @Html.DropDownList("Temp", ViewData["users"] as SelectList)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.What)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.What) @Html.ValidationMessageFor(model => model.What)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.When)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.When) @Html.ValidationMessageFor(model => model.When)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HowMuch)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HowMuch) @Html.ValidationMessageFor(model => model.HowMuch)
+        </div>
+        @Html.HiddenFor(model => model.Id)
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

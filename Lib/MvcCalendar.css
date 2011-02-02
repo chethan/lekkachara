@@ -1,0 +1,15 @@
+﻿/*######################################################
+  Copyright 2008 Shiny Zhu All Rights Reserved.
+  Author: Shiny Zhu (shinyzhu.com)
+  
+  Creation Date: July 7, 2008
+  MVC Calendar Default Styles
+  Please view: http://shinyzhu.com/blog/entry/aspnet-mvc-calendar
+#####################################################*/
+.tbCalendar{border-collapse:collapse;}
+.tbCalendar a{text-decoration:underline;}
+.tbCalendar caption{padding:3px;text-align:center;}
+.tbCalendar th,.tbCalendar td{padding:3px;text-align:center;border:1px solid #ddd;border-collapse:collapse;}
+.tbCalendar th{font-weight:bold;background:#eee;}
+.tbCalendar td{padding:3px 5px;}
+.tbCalendar td.today{background:#a2adbc;font-weight:bold;color:#fff;}
