@@ -74,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\transaction.css" />
     <Content Include="Content\images\Background.jpg" />
     <Content Include="Content\images\BannerBottomEdge.gif" />
